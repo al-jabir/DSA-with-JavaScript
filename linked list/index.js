@@ -30,3 +30,6 @@ let newNode1 = new Node(9);
 console.log(newLinkedList.append(newNode1));
 console.log(newLinkedList.append(new Node(18)));
 console.log(newLinkedList.append(new Node(27)));
+console.log(newLinkedList.append(new Node('Code')));
+console.log(newLinkedList.append(new Node('Frontend')));
+console.log(newLinkedList.append(new Node('Junior Software devleoper')));
