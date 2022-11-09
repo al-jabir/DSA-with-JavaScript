@@ -58,6 +58,16 @@ class LinkedList {
     }
     return text;
   }
+  //toArray
+  toArray() {
+    let node = this.head;
+    let nodes = [];
+    while (node) {
+      nodes.push(node.data);
+      node = node.next;
+    }
+    return nodes;
+  }
 }
 
 class Node {
@@ -84,6 +94,7 @@ newLinkedList.append(
 );
 
 console.log(newLinkedList.toString());
+console.log(newLinkedList.toArray());
 console.log(newLinkedList);
 console.log(newLinkedList.length());
 console.log(newLinkedList.firstNode());
