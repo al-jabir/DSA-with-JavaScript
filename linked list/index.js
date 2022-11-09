@@ -41,6 +41,23 @@ class LinkedList {
     }
     return lastItem;
   }
+  //toString method
+  toString() {
+    let node = this.head;
+    let text = '';
+    while (node) {
+      if (Array.isArray(node.data)) {
+        node.data = JSON.stringify(node.data);
+      }
+      if (node.next === null) {
+        text += `${node.data}`;
+      } else {
+        text += `${node.data}, `;
+      }
+      node = node.next;
+    }
+    return text;
+  }
 }
 
 class Node {
@@ -62,6 +79,7 @@ newLinkedList.append(
   new Node([
     'Jabir',
     { position: 'Junior Frontend Developer', location: 'London, England' },
+    1998,
   ])
 );
 
