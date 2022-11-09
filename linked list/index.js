@@ -27,6 +27,20 @@ class LinkedList {
     }
     return length;
   }
+  // first Item
+  firstNode() {
+    return this.head;
+  }
+  //last Item
+  lastNode() {
+    let lastItem = this.head;
+    if (lastItem) {
+      while (lastItem.next) {
+        lastItem = lastItem.next;
+      }
+    }
+    return lastItem;
+  }
 }
 
 class Node {
@@ -44,6 +58,15 @@ newLinkedList.append(new Node(27));
 newLinkedList.append(new Node('Code'));
 newLinkedList.append(new Node('Frontend'));
 newLinkedList.append(new Node('Junior Software devleoper'));
+newLinkedList.append(
+  new Node([
+    'Jabir',
+    { position: 'Junior Frontend Developer', location: 'London, England' },
+  ])
+);
 
+console.log(newLinkedList.toString());
 console.log(newLinkedList);
 console.log(newLinkedList.length());
+console.log(newLinkedList.firstNode());
+console.log(newLinkedList.lastNode());
