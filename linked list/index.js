@@ -9,9 +9,10 @@ class LinkedList {
       this.head = newNode;
       return this;
     }
-    // while (node.next) {
-    //   node = node.next;
-    // }
+
+    if (node.next !== null) {
+      node = node.next;
+    }
     node.next = newNode;
   }
 }
