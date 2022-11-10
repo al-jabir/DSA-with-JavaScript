@@ -5,13 +5,20 @@ class LinkedList {
   // append data
   append(newNode) {
     let node = this.head;
+
+    // condition check
     if (node === null) {
+      // empty data...
       this.head = newNode;
       return this;
     }
+
+    // loop
     while (node.next) {
       node = node.next;
     }
+
+    // new data append
     node.next = newNode;
   }
 }
