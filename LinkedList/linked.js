@@ -3,6 +3,13 @@ class LinkedList {
     this.head = head;
   }
   // append data
+  append(newNode) {
+    let node = this.head;
+    if (node === null) {
+      this.head = newNode;
+      return this;
+    }
+  }
 }
 
 class Node {
@@ -13,5 +20,6 @@ class Node {
 }
 
 let myList = new LinkedList();
+myList.append(new Node('mafia'));
 
 console.log(myList);
