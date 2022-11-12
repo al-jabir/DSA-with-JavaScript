@@ -113,6 +113,7 @@ class Stack {
       this.head = newNode;
       this.head.next = tempHead;
     }
+    this.length++;
 
     return this;
   }
