@@ -96,6 +96,11 @@ class LinkedList {
     }
     return false;
   }
+  // empty
+  empty() {
+    this.head = null;
+    return this;
+  }
 }
 
 class Node {
@@ -131,4 +136,6 @@ console.log(myList.isFirstItem());
 console.log(myList.isLastItem());
 console.log(myList.toString());
 console.log(myList.isArray());
+console.log(myList.isEmpty());
+console.log(myList.empty());
 console.log(myList.isEmpty());
