@@ -14,6 +14,15 @@ class Linked {
     }
     node.next = newData;
   }
+  isLength() {
+    let node = this.head;
+    let len = 0;
+    while (node) {
+      len++;
+      node = node.next;
+    }
+    return len;
+  }
 }
 
 class Node {
@@ -32,3 +41,4 @@ list.append(new Node('Mafia'));
 list.append(new Node(1998));
 
 console.log(list);
+console.log(list.isLength());
