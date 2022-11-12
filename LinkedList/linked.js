@@ -52,23 +52,26 @@ class LinkedList {
     return lastItem;
   }
   // string method
-
   toString() {
     let node = this.head;
     let str = '';
+    // node check conditon
     while (node) {
-      // array check condition
+      // condition check Array
+
       if (Array.isArray(node.data)) {
         node.data = JSON.stringify(node.data);
       }
-      if (node) {
-        str = `${str}${node.data} `;
+      // condition check ,
+      if (node.next === null) {
+        str += `${node.data} `;
         node = node.next;
       } else {
-        str = `${str}${node.data}, `;
+        str += `${node.data}, `;
         node = node.next;
       }
     }
+
     return str;
   }
 }
@@ -89,7 +92,14 @@ myList.append(new Node('be'));
 myList.append(new Node('King'));
 myList.append(new Node(1998));
 myList.append(
-  new Node(['fuck', 'sex', 19, 9, { sex: 'male', ride: 'fucking riders' }])
+  new Node([
+    'fuck',
+    'sex',
+    19,
+    9,
+    { sex: 'male', ride: 'fucking riders' },
+    2003,
+  ])
 );
 
 console.log(myList);
