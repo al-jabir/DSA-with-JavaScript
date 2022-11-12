@@ -38,6 +38,20 @@ class Stack {
     }
     return false;
   }
+
+  // toString
+
+  toString() {
+    let str = '';
+    for (let i = 0; i < this.StackItems.length; i++) {
+      if (i === this.StackItems.length - 1) {
+        str += `${this.StackItems[i]} `;
+      } else {
+        str += `${this.StackItems[i]}, `;
+      }
+    }
+    return str;
+  }
 }
 
 let newStack = new Stack();
@@ -51,6 +65,9 @@ newStack.isPush(25);
 newStack.isPush(19);
 newStack.isPush('load fucks');
 
+// check toString
+
+console.log(newStack.toString());
 // check lastItem
 
 console.log(newStack.lastItem());
