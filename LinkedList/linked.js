@@ -32,6 +32,11 @@ class LinkedList {
     }
     return length;
   }
+  // first Item
+
+  isFirstItem() {
+    return this.head;
+  }
 }
 
 class Node {
@@ -54,3 +59,4 @@ myList.append(new Node(['fuck', 'sex', 19, 9]));
 console.log(myList);
 
 console.log(myList.isLength());
+console.log(myList.isFirstItem());
