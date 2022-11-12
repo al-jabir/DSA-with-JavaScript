@@ -88,6 +88,14 @@ class LinkedList {
     }
     return arr;
   }
+  // isEmpty
+  isEmpty() {
+    let node = this.head;
+    if (node === null) {
+      return true;
+    }
+    return false;
+  }
 }
 
 class Node {
@@ -123,3 +131,4 @@ console.log(myList.isFirstItem());
 console.log(myList.isLastItem());
 console.log(myList.toString());
 console.log(myList.isArray());
+console.log(myList.isEmpty());
