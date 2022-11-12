@@ -56,6 +56,13 @@ class Linked {
     this.head = null;
     return this;
   }
+  isEmpty() {
+    let node = this.head;
+    if (node === null) {
+      return true;
+    }
+    return false;
+  }
 }
 
 class Node {
