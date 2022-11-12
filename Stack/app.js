@@ -11,6 +11,15 @@ class Stack {
 
   isPush(item) {
     this.StackItems.push(item);
+    return this;
+  }
+
+  // isPop
+
+  isPop() {
+    let len = this.StackItems;
+
+    return this.StackItems.pop();
   }
 }
 
@@ -22,4 +31,8 @@ newStack.isPush(25);
 newStack.isPush(19);
 newStack.isPush('load fucks');
 
+// isPop
+newStack.isPop();
+newStack.isPop();
+newStack.isPop();
 console.log(newStack);
