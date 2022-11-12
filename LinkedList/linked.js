@@ -74,6 +74,20 @@ class LinkedList {
 
     return str;
   }
+
+  // Array
+
+  isArray() {
+    let node = this.head;
+    let arr = [];
+
+    // loop check Array
+    while (node) {
+      arr.push(node.data);
+      node = node.next;
+    }
+    return arr;
+  }
 }
 
 class Node {
@@ -108,3 +122,4 @@ console.log(myList.isLength());
 console.log(myList.isFirstItem());
 console.log(myList.isLastItem());
 console.log(myList.toString());
+console.log(myList.isArray());
