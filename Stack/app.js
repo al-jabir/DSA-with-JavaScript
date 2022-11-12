@@ -2,7 +2,7 @@
 
 // Array Implemetion of stack
 
-class Stack {
+class Stacks {
   constructor() {
     this.StackItems = [];
   }
@@ -55,7 +55,7 @@ class Stack {
   }
 }
 
-let newStack = new Stack();
+let newStack = new Stacks();
 // check isEmpty
 
 console.log(newStack.isEmpty());
@@ -85,3 +85,41 @@ console.log(newStack.isEmpty());
 // lastItem
 newStack.lastItem();
 console.log(newStack);
+
+class Node {
+  constructor(val) {
+    this.val = val;
+    this.next = null;
+  }
+}
+
+class Stack {
+  constructor() {
+    this.head = null;
+    this.tail = null;
+    this.length = 0;
+  }
+
+  // isPush
+
+  isPush(val) {
+    let newNode = new Node(val);
+    // check null
+    if (!this.head) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      let tempHead = this.head;
+      this.head = newNode;
+      this.head.next = tempHead;
+    }
+
+    return this;
+  }
+}
+
+let newStacks = new Stack();
+
+newStacks.isPush('Mafia');
+newStacks.isPush('King');
+console.log(newStacks);
