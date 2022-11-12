@@ -42,6 +42,20 @@ class Linked {
 
     return str;
   }
+  isArray() {
+    let node = this.head;
+    let nodes = [];
+    while (node) {
+      nodes.push(node.data);
+      node = node.next;
+    }
+    return nodes;
+  }
+
+  empty() {
+    this.head = null;
+    return this;
+  }
 }
 
 class Node {
@@ -63,3 +77,6 @@ list.append(new Node(['fuck', 'fucked', { name: 'Emma', age: 22 }, 2003]));
 console.log(list);
 console.log(list.isLength());
 console.log(list.toString());
+console.log(list.isArray());
+console.log(list.empty());
+console.log(list.isEmpty());
