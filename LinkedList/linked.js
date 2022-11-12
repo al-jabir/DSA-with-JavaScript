@@ -31,6 +31,8 @@ class Node {
 }
 
 let myList = new LinkedList();
+let myNode = new Node('Coder');
+console.log(myNode);
 myList.append(new Node('mafia'));
 myList.append(new Node('will'));
 myList.append(new Node('be'));
