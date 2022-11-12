@@ -37,6 +37,20 @@ class LinkedList {
   isFirstItem() {
     return this.head;
   }
+
+  // last Item
+
+  isLastItem() {
+    let lastItem = this.head;
+    // check condition
+    if (lastItem) {
+      // null loop check
+      while (lastItem.next) {
+        lastItem = lastItem.next;
+      }
+    }
+    return lastItem;
+  }
 }
 
 class Node {
@@ -60,3 +74,4 @@ console.log(myList);
 
 console.log(myList.isLength());
 console.log(myList.isFirstItem());
+console.log(myList.isLastItem());
