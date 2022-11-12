@@ -117,10 +117,25 @@ class Stack {
 
     return this;
   }
+
+  // isPop
+
+  isPop() {
+    if (!this.head) return null;
+    let temp = this.head;
+    this.head - this.head.next;
+    this.length--;
+    return temp.value;
+  }
 }
 
 let newStacks = new Stack();
 
 newStacks.isPush('Mafia');
 newStacks.isPush('King');
-console.log(newStacks);
+
+newStacks.isPop();
+
+console.log(newStacks.isPop());
+
+// console.log(newStacks);
