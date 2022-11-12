@@ -127,6 +127,11 @@ class Stack {
     this.length--;
     return temp.value;
   }
+
+  // isClear
+  isClear() {
+    return (this.head = []);
+  }
 }
 
 let newStacks = new Stack();
@@ -138,4 +143,6 @@ newStacks.isPop();
 
 console.log(newStacks.isPop());
 
-// console.log(newStacks);
+console.log(newStacks);
+
+console.log(newStacks.isClear());
