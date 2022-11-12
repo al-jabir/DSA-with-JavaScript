@@ -21,6 +21,17 @@ class LinkedList {
     // new data append
     node.next = newNode;
   }
+  //length
+
+  isLength() {
+    let length = 0;
+    let node = this.head;
+    while (node) {
+      length++;
+      node = node.next;
+    }
+    return length;
+  }
 }
 
 class Node {
@@ -40,3 +51,5 @@ myList.append(new Node('King'));
 myList.append(new Node(1998));
 
 console.log(myList);
+
+console.log(myList.isLength());
