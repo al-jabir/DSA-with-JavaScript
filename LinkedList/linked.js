@@ -25,7 +25,7 @@ class LinkedList {
 
   isLength() {
     let length = 0;
-    let node = this.head;
+    let node = this.head; // null
     while (node) {
       length++;
       node = node.next;
@@ -49,6 +49,7 @@ myList.append(new Node('will'));
 myList.append(new Node('be'));
 myList.append(new Node('King'));
 myList.append(new Node(1998));
+myList.append(new Node(['fuck', 'sex', 19, 9]));
 
 console.log(myList);
 
