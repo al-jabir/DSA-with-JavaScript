@@ -51,6 +51,26 @@ class LinkedList {
     }
     return lastItem;
   }
+  // string method
+
+  toString() {
+    let node = this.head;
+    let str = '';
+    while (node) {
+      // array check condition
+      if (Array.isArray(node.data)) {
+        node.data = JSON.stringify(node.data);
+      }
+      if (node) {
+        str = `${str}${node.data} `;
+        node = node.next;
+      } else {
+        str = `${str}${node.data}, `;
+        node = node.next;
+      }
+    }
+    return str;
+  }
 }
 
 class Node {
@@ -68,10 +88,13 @@ myList.append(new Node('will'));
 myList.append(new Node('be'));
 myList.append(new Node('King'));
 myList.append(new Node(1998));
-myList.append(new Node(['fuck', 'sex', 19, 9]));
+myList.append(
+  new Node(['fuck', 'sex', 19, 9, { sex: 'male', ride: 'fucking riders' }])
+);
 
 console.log(myList);
 
 console.log(myList.isLength());
 console.log(myList.isFirstItem());
 console.log(myList.isLastItem());
+console.log(myList.toString());
