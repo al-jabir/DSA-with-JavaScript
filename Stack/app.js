@@ -18,7 +18,10 @@ class Stack {
 
   isPop() {
     let len = this.StackItems;
-
+    // condition check === 0
+    if (len.length === 0) {
+      throw new Error('Stack uderflow');
+    }
     return this.StackItems.pop();
   }
 }
@@ -35,4 +38,6 @@ newStack.isPush('load fucks');
 newStack.isPop();
 newStack.isPop();
 newStack.isPop();
+newStack.isPop();
+
 console.log(newStack);
